@@ -97,23 +97,31 @@ p {
     display: inline-block;
     float: left;
     clear: left;
-    max-width: 250px;
+   /* max-width: 200px;*/
 	margin: 0;
 	min-height:40px;
 	border: none;
+	width: 65%;
+	padding-left: 0;
+	padding-right: 0;
 
 }
 
 #mc_embed_signup {
 margin-left: auto;
 margin-right: auto;
-width: 360px;
+width: 280px;
 }
+
+#mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 0}
+
+#mc_embed_signup input.email, #mc_embed_signup input.button {-webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px;}
 
 #mc_embed_signup input.button {  
 	display: inline-block;
 	width: auto;
 	min-height:40px;
 	border: none;
+
 }
 
