@@ -4,6 +4,14 @@
 html,
 body {
   height: 100%;
+  background: rgba(40,40,40,1);
+  background: -moz-linear-gradient(top, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(40,40,40,1)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#000000', GradientType=0 );
   /* The html and body elements cannot have any padding or margin. */
 }
 #wrap {
@@ -18,6 +26,16 @@ body {
   padding-top: 50px;
 }
 
+@media (max-width: 979px) {
+	#body {
+	  padding-top: 0px;
+	}
+	body {
+		background-position: center 250px;
+	}
+}	
+
+
 #push,
 #footer {
  height: 60px;
@@ -27,13 +45,75 @@ body {
  padding-top: 20px;
 }
 
+@media (min-width: 768px) {
+	body {
+	    background: url("../img/background-minions.png") no-repeat center 175px;
+		background-size: 75%;
+	}
+}
+
+@media (max-width: 980px) {
+	body {
+		background-position: center 275px;
+	}
+}
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+	body {
+	    background: url("../img/background-minions-50.png") no-repeat center 275px;
+	}
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+	font-family:Arial;
+	color: #c75427;
+}
+
+p {
+	text-align: center;
+	font-size: 1em;
+	font-family:Arial;
+	color: #c75427;
+}
+
+.navbar-inverse .brand {
+	font-family: Arial;
+	background: -webkit-linear-gradient(top, #e7bba8, #c75427);
+	background: linear-gradient(top, #e7bba8, #c75427);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#mc_embed_signup input.email {
+	text-align: center;
+    display: inline-block;
+    float: left;
+    clear: left;
+    max-width: 250px;
+	margin: 0;
+	min-height:40px;
+	border: none;
+
+}
+
+#mc_embed_signup {
+margin-left: auto;
+margin-right: auto;
+width: 360px;
+}
+
+#mc_embed_signup input.button {  
+	display: inline-block;
+	width: auto;
+	min-height:40px;
+	border: none;
 }
 
